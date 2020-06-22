@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/small_margin">
+
+    <ImageView
+        android:id="@+id/iv_sub"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="H,375:190"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/meduim_padding"
+        android:layout_marginTop="@dimen/small_padding"
+
+        android:paddingStart="@dimen/small_padding"
+        android:text="Département Informatique"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/txt_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_sub" />
+
+
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/meduim_padding"
+        android:paddingStart="@dimen/small_padding"
+        android:text=""
+        android:textColor="@color/colorGre03"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="@dimen/img_size"
+        android:layout_height="@dimen/img_size"
+        android:layout_marginStart="@dimen/meduim_padding"
+        android:layout_marginTop="@dimen/smaller_margin"
+        android:layout_marginBottom="@dimen/small_margin"
+        app:srcCompat="@drawable/call"
+        android:drawablePadding="@dimen/small_padding"
+        android:scaleType="centerCrop"
+        android:paddingStart="@dimen/small_padding"
+        android:textColor="@color/colorGrey01"
+        android:textSize="@dimen/medium_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subTitle" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/smaller_margin"
+        android:layout_marginTop="@dimen/smaller_margin"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:drawableLeft="@drawable/icon_popup_dummy"
+        android:drawablePadding="@dimen/small_padding"
+
+        android:textColor="@color/colorGrey01"
+        android:textSize="@dimen/medium_size"
+        app:layout_constraintStart_toEndOf="@+id/date"
+        app:layout_constraintTop_toBottomOf="@+id/subTitle" />
+
+    <TextView
+        android:id="@+id/lapse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/smaller_margin"
+        android:layout_marginTop="@dimen/smaller_margin"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:drawableLeft="@drawable/icon_popup_dummy"
+        android:drawablePadding="@dimen/small_padding"
+
+        android:text="hello"
+        android:textColor="@color/colorGrey01"
+        android:textSize="@dimen/medium_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/subTitle" />
+
+    <TextView
+        android:id="@+id/locale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/meduim_padding"
+        android:layout_marginTop="@dimen/smaller_margin"
+        android:drawableLeft="@drawable/icon_popup_dummy"
+        android:drawablePadding="@dimen/small_padding"
+
+        android:paddingStart="@dimen/small_padding"
+        android:textColor="@color/colorGrey01"
+        android:textSize="@dimen/medium_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+
+    <View
+        android:id="@+id/v_separator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/meduim_padding"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorGrey02"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locale" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/meduim_padding"
+        android:layout_marginTop="@dimen/meduim_padding"
+        android:layout_marginEnd="@dimen/meduim_padding"
+        android:ellipsize="end"
+
+        android:maxLines="2"
+        android:paddingStart="@dimen/small_padding"
+        android:paddingEnd="@dimen/small_padding"
+        android:text="lorem"
+        android:textColor="@color/colorGreyText"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintEnd_toEndOf="@id/v_separator"
+        app:layout_constraintStart_toStartOf="@id/v_separator"
+        app:layout_constraintTop_toBottomOf="@id/v_separator" />
+
+    <TextView
+        android:id="@+id/tv_fulldesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/meduim_padding"
+
+        android:inputType="text"
+        android:paddingStart="@dimen/small_padding"
+        android:text="full_desc"
+        android:textColor="@color/colorPurple02"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toEndOf="@+id/tv_desc"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="@dimen/img_size"
+        android:layout_height="@dimen/img_size"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fulldesc"
+        app:srcCompat="@drawable/ic_logo" />
+
+    <TextView
+        android:id="@+id/tv_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/smaller_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+
+        android:text="Contacts"
+        android:textColor="@color/colorGreyText"
+        android:textSize="@dimen/medium_size"
+        app:layout_constraintStart_toEndOf="@+id/iv_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fulldesc" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

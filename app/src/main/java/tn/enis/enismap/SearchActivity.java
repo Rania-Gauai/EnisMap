@@ -21,18 +21,19 @@ import android.widget.PopupWindow;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
-public class MapActivity extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
     private FloatingActionButton test;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_search);
+        /*setContentView(R.layout.activity_map);
 
         String address="file:///android_asset/index.html";
         WebView view=(WebView)this.findViewById(R.id.carte);
         view.getSettings().setJavaScriptEnabled(true);
         view.loadUrl(address);
-        view.setWebViewClient(new MyBrowser());
+        view.setWebViewClient(new MyBrowser());*/
 
 
 
@@ -69,9 +70,9 @@ public class MapActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        Intent myIntent = new Intent(MapActivity.this, PlacesActivity.class);
+                        Intent myIntent = new Intent(SearchActivity.this, PlacesActivity.class);
                         myIntent.putExtra("key", "depart"); //Optional parameters
-                        MapActivity.this.startActivity(myIntent);
+                        SearchActivity.this.startActivity(myIntent);
 
 
                     }
@@ -85,9 +86,9 @@ public class MapActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        Intent myIntent = new Intent(MapActivity.this, PlacesActivity.class);
+                        Intent myIntent = new Intent(SearchActivity.this, PlacesActivity.class);
                         myIntent.putExtra("key", "arrive"); //Optional parameters
-                        MapActivity.this.startActivity(myIntent);
+                        SearchActivity.this.startActivity(myIntent);
 
 
                     }
@@ -122,11 +123,6 @@ public class MapActivity extends AppCompatActivity {
             }
         });
     }
-    private class MyBrowser extends WebViewClient{
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view,String url){
-            view.loadUrl(url);
-            return true;
-        }
+
     }
-}
+

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPink"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPink">
+
+        <include
+            android:id="@+id/detail_place"
+            layout="@layout/include_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+
+            android:paddingBottom="@dimen/small_margin"
+            android:text="Place Activity"
+            android:textColor="@color/colorGrey01"
+            android:textSize="@dimen/txt_size"
+
+            app:layout_constraintTop_toBottomOf="@+id/detail_place"/>
+        <TextView
+            android:id="@+id/tv_place2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+
+            android:paddingBottom="@dimen/small_margin"
+            android:text="Place Activity"
+            android:textColor="@color/colorGrey01"
+            android:textSize="@dimen/txt_size"
+
+            app:layout_constraintTop_toBottomOf="@+id/tv_place"/>
+        <TextView
+            android:id="@+id/tv_place3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+
+            android:paddingBottom="@dimen/small_margin"
+            android:text="Place Activity"
+            android:textColor="@color/colorGrey01"
+            android:textSize="@dimen/txt_size"
+
+            app:layout_constraintTop_toBottomOf="@+id/tv_place2"/>
+        <TextView
+            android:id="@+id/tv_place4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+
+            android:paddingBottom="@dimen/small_margin"
+            android:text="Place Activity"
+            android:textColor="@color/colorGrey01"
+            android:textSize="@dimen/txt_size"
+
+            app:layout_constraintTop_toBottomOf="@+id/tv_place3"/>
+
+        <TextView
+            android:id="@+id/tv_place5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+
+            android:paddingBottom="@dimen/small_margin"
+            android:text="Place Activity"
+            android:textColor="@color/colorGrey01"
+            android:textSize="@dimen/txt_size"
+
+            app:layout_constraintTop_toBottomOf="@+id/tv_place4"/>
+
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
