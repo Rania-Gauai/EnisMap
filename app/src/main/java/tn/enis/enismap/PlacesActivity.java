@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import tn.enis.enismap.adapters.PlacesAdapter;
 
 
-public class PlacesActivity extends AppCompatActivity {
+public class PlacesActivity extends AppCompatActivity implements PlacesAdapter.ItemClickListener {
     PlacesAdapter adapter;
 
     @Override
@@ -58,7 +58,7 @@ public class PlacesActivity extends AppCompatActivity {
 
     public void onItemClick(View view, int position) {
 
-        Intent myIntent = new Intent(PlacesActivity.this, MapActivity.class);
+        Intent myIntent = new Intent(PlacesActivity.this, SearchActivity.class);
 
         Intent intent = getIntent();
         final String name = intent.getStringExtra("key");

@@ -99,4 +99,5 @@ public class Acceuil extends AppCompatActivity {
         placeList.add(new PlaceItem("Les Salles S",R.drawable.ic_logo));
         placeList.add(new PlaceItem("Terrain",R.drawable.ic_logo));
     }
+    //https://www.w3schools.com/colors/colors_picker.asp
 }
