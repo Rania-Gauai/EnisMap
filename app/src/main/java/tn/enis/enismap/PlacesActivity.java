@@ -58,7 +58,7 @@ public class PlacesActivity extends AppCompatActivity implements PlacesAdapter.I
 
     public void onItemClick(View view, int position) {
 
-        Intent myIntent = new Intent(PlacesActivity.this, SearchActivity.class);
+        Intent myIntent = new Intent(PlacesActivity.this, MapActivity.class);
 
         Intent intent = getIntent();
         final String name = intent.getStringExtra("key");

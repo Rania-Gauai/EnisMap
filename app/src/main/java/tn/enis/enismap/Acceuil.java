@@ -40,6 +40,7 @@ public class Acceuil extends AppCompatActivity {
         ImageView imageView_img =  (ImageView) findViewById(R.id.imageEnis);
         imageView_img.setOnClickListener (new ImageButton.OnClickListener() {
             public void onClick (View v){
+
                 Intent intent = new Intent (Acceuil.this, MapActivity.class);
                 startActivity(intent);
             }
@@ -54,27 +55,14 @@ public class Acceuil extends AppCompatActivity {
         editText.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), editText.getEditableText()+ "This is my Toast message!",
-                        Toast.LENGTH_LONG).show();
+               /* Toast.makeText(getApplicationContext(), editText.getEditableText()+ "This is my Toast message!",
+                        Toast.LENGTH_LONG).show();*/
                 Intent myIntent = new Intent(view.getContext(), PlaceDetailActivity.class);
-                myIntent.putExtra("key", "details");
+                myIntent.putExtra("key", editText.getEditableText().toString());
                 startActivity(myIntent);
             }
         });
         editText.setAdapter(adapter);
-        Button btnArrive = (Button) findViewById(R.id.popup_bottom_button);
-        btnArrive.setOnClickListener(new Button.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                Intent myIntent = new Intent(Acceuil.this, SearchActivity.class);
-                myIntent.putExtra("key", "arrive"); //Optional parameters
-                Acceuil.this.startActivity(myIntent);
-
-
-            }
-        });
 
 
     }
