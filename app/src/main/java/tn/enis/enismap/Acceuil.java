@@ -11,18 +11,9 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
+import android.widget.TextView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AutoCompleteTextView;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.Toast;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +29,8 @@ public class Acceuil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acceuil);
         ImageView imageView_img =  (ImageView) findViewById(R.id.imageEnis);
+        TextView places_tv =  (TextView) findViewById(R.id.tv_place2);
+
         imageView_img.setOnClickListener (new ImageButton.OnClickListener() {
             public void onClick (View v){
 
@@ -63,6 +56,16 @@ public class Acceuil extends AppCompatActivity {
             }
         });
         editText.setAdapter(adapter);
+
+      places_tv.setOnClickListener (new TextView.OnClickListener() {
+            public void onClick (View v){
+                Intent myIntent = new Intent (Acceuil.this, PlacesActivity.class);
+                myIntent.putExtra("key", "all"); //Optional parameters
+                Acceuil.this.startActivity(myIntent);
+
+            }
+        });
+
 
 
     }

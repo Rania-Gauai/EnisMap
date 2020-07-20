@@ -75,7 +75,7 @@
 
         <Button
             android:id="@+id/popup_bottom_button"
-            style="@style/ButtonVivasomPopupPrimary"
+            style="@style/ButtonVivasomPopupSecondary"
             android:layout_marginStart="20dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"

@@ -4,27 +4,36 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import tn.enis.enismap.adapters.PlacesAdapter;
 
 
 public class PlacesActivity extends AppCompatActivity implements PlacesAdapter.ItemClickListener {
     PlacesAdapter adapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itenerary_places);
+
         TextView textView = (TextView) findViewById(R.id.tv_name);
         Intent intent = getIntent();
         final String name = intent.getStringExtra("key");
-        if (name.equals("arrive")) {
+        final String nameArrive = intent.getStringExtra("key2");
+        if (nameArrive != null) {
             textView.setText("Point d'arrivée");
+        } else if (name.equals("all")) {
+            textView.setText("Tous les lieux");
         }
         // data to populate the RecyclerView with
         ArrayList<String> placeNames = new ArrayList<>();
@@ -61,13 +70,48 @@ public class PlacesActivity extends AppCompatActivity implements PlacesAdapter.I
         Intent myIntent = new Intent(PlacesActivity.this, MapActivity.class);
 
         Intent intent = getIntent();
+
         final String name = intent.getStringExtra("key");
-        myIntent.putExtra("key", name);
-        myIntent.putExtra("id", adapter.getItem(position));
+        final String nameArrive = intent.getStringExtra("key2");
+
+
+        final String dep  = intent.getStringExtra("id");
+        final String arr = intent.getStringExtra("id2");
+
+
+
+        if( dep != null){
+
+            myIntent.putExtra("id", dep);
+        }
+        else if ( arr != null ){
+
+            myIntent.putExtra("id2", arr);
+        }
+
+
+
+        if(name != null){
+            myIntent.putExtra("key", name);
+            myIntent.putExtra("id", adapter.getItem(position));
+        }
+        else if (nameArrive != null ){
+            myIntent.putExtra("key2", nameArrive);
+            myIntent.putExtra("id2", adapter.getItem(position));
+        }
+
+
+
+        myIntent.putExtra("cle", "localize");
+
+
         //Optional parameters
         PlacesActivity.this.startActivity(myIntent);
 
 
+
         //Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
     }
+
+
 }

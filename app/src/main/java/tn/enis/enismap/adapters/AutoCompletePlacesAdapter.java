@@ -34,11 +34,13 @@ public class AutoCompletePlacesAdapter extends ArrayAdapter<PlaceItem> {
         super(context, 0, placeList);
         placeListFull = new ArrayList<>(placeList);
     }
+
     @NonNull
     @Override
     public Filter getFilter() {
         return placeFilter;
     }
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -80,12 +82,14 @@ public class AutoCompletePlacesAdapter extends ArrayAdapter<PlaceItem> {
             results.count = suggestions.size();
             return results;
         }
+
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
             clear();
             addAll((List) results.values);
             notifyDataSetChanged();
         }
+
         @Override
         public CharSequence convertResultToString(Object resultValue) {
             return ((PlaceItem) resultValue).getPlaceName();

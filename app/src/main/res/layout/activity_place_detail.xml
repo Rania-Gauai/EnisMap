@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPink"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="@color/colorPink"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
 
         <include
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
@@ -37,8 +37,7 @@
             android:textColor="@color/colorGrey01"
             android:textSize="@dimen/txt_size"
 
-            app:layout_constraintTop_toBottomOf="@+id/detail_place"/>
-
+            app:layout_constraintTop_toBottomOf="@+id/detail_place" />
 
 
     </LinearLayout>
